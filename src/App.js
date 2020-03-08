@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
     <Container fluid='true'>
-      <Navbar sticky='top' bg='light'>
+      <Navbar fixed='top' bg='light'>
         <Container>
         <Nav>
           <Nav.Link>
@@ -20,10 +20,10 @@ function App() {
             <Link to='/personal-portfolio-website/about'>About</Link>
           </Nav.Link>
           <Nav.Link>
-            <Link to='/personal-portfolio-website/contact'>Contact{' '}</Link>
+            <Link to='/personal-portfolio-website/contact'>Contact</Link>
           </Nav.Link>
         </Nav>
-        <Navbar.Brand>Sergio Cohen-Salama</Navbar.Brand>
+        <Navbar.Brand>C-S</Navbar.Brand>
         </Container>
       </Navbar>
     </Container>
