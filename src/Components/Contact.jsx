@@ -27,22 +27,32 @@ class Contact extends React.Component {
         <br/>
         <Form onSubmit={this.handleSubmit}>
           <Form.Group>
-              <Form.Label>Your Name</Form.Label>
+              <div className='left'>
+                <Form.Label>Your Name</Form.Label>
+              </div>
               <Form.Control required type="text"/>
           </Form.Group>
           <Form.Group>
-              <Form.Label>Your Email</Form.Label>
+              <div className='left'>
+                <Form.Label>Your Email</Form.Label>
+              </div>
               <Form.Control required type="email" placeholder='example@domain.com'/>
           </Form.Group>
           <Form.Group>
-              <Form.Label>Your Number</Form.Label>
+              <div className='left'>
+                <Form.Label>Your Number</Form.Label>
+              </div>
               <Form.Control required type="tel" placeholder='123-456-7890' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
           </Form.Group>
           <Form.Group>
-              <Form.Label>Message</Form.Label>
+              <div className='left'>
+                <Form.Label>Message</Form.Label>
+              </div>
               <Form.Control required as='textarea' rows="5"/>
           </Form.Group>
-          <Button type="submit" variant="primary">Send</Button>
+          <div className='right'>
+            <Button type="submit" variant="primary">Send</Button>
+          </div>
         </Form>
         <br/>
         {(this.state.thanks ? <p>Thanks!</p> : <p></p>)}
