@@ -101,6 +101,13 @@ class Contact extends React.Component {
         </Form>
         <br/>
         {(this.state.thanks ? <p>Thanks!</p> : <p></p>)}
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
       </Container>
       </>
     )
