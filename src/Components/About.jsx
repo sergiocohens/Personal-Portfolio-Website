@@ -2,17 +2,18 @@ import React from 'react'
 import { Container, Card, Image } from 'react-bootstrap'
 import pic from '../assets/c-s.jpg'
 
-const About = () => {
+const About = (props) => {
   return (
+    <>
     <Container>
       <br/>
       <div className='right'>
         <h3 className='title'>About Me</h3>
       </div>
       <br/>
-      <Card>
+      <Card style={{ borderColor: props.theme[4], borderWidth: '3px',  backgroundColor: props.theme[1] }}>
         <br/>
-        <Image style={{width:'50%', height:'auto'}} className='mx-auto d-block' roundedCircle src={pic}/>
+        <Image style={{ width:'50%', height:'auto' }} className='mx-auto d-block' roundedCircle src={pic}/>
         <Card.Body>
           <br/>
           <p>Hey, I'm Sergio!</p>
@@ -23,6 +24,7 @@ const About = () => {
       </Card>
       <br/>
     </Container>
+    </>
   )
 }
 

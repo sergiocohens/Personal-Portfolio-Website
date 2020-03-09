@@ -1,8 +1,16 @@
 import React from 'react'
 import { Jumbotron, Media, Container, Nav, Image } from 'react-bootstrap'
 
-const Home = () => {
+const Home = (props) => {
   return (
+    <>
+    <style type='text/css'>
+    {`
+      .jumbotron {
+        background-color: ${props.theme[2]}
+      }
+    `}
+    </style>
     <Container>
       <br/>
       <div className='right'>
@@ -55,6 +63,7 @@ const Home = () => {
         </Media>
       </Jumbotron>
     </Container>
+    </>
   )
 }
 
