@@ -48,6 +48,10 @@ class Contact extends React.Component {
               box-shadow: 0px 0px 1px ${this.state.theme[4]} inset, 0px 0px 8px ${this.state.theme[4]}
             }
 
+            ::placeholder {
+              color: lightgray
+            }
+
             .btn-theme {
               background-color:${this.state.theme[2]}
             }
@@ -100,57 +104,7 @@ class Contact extends React.Component {
           </div>
         </Form>
         <br/>
-        {(this.state.thanks ? <p>Thanks!</p> : <p></p>)}
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+        {(this.state.thanks ? <h3>Thanks!</h3> : <p></p>)}
         <br/>
       </Container>
       </>

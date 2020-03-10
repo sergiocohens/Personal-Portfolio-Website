@@ -8,14 +8,14 @@ import Contact from './Components/Contact'
 
 class App extends React.Component {
   state = {
-    theme: ['black','white', 'lightgray', 'darkgray', 'red']
+    theme: ['black','white', 'lightgray', 'darkgray', 'darkred']
   }
 
   changeTheme = (event) => {
     switch (event.target.innerText) {
       case 'Classic':
         this.setState({
-          theme: ['black','white', 'lightgray', 'darkgray', 'red']
+          theme: ['black','white', 'lightgray', 'darkgray', 'darkred']
         })
       break;
       case '80s':
