@@ -4,14 +4,6 @@ import projects from '../assets/projects.js'
 
 const Home = (props) => {
   return (
-    <>
-    <style type='text/css'>
-    {`
-      .jumbotron {
-        background-color: ${props.theme[3]}
-      }
-    `}
-    </style>
     <Container>
       <br/>
       <div className='right'>
@@ -20,7 +12,7 @@ const Home = (props) => {
       <br/>
       {projects.map((project) => {
         return (
-          <Jumbotron>
+          <Jumbotron style={{backgroundColor: props.theme[2]}} key={project.name}>
             <Media>
               <Image
                 style={{width:'50%', height:'auto'}}
@@ -37,7 +29,7 @@ const Home = (props) => {
           </Jumbotron>
         )
       })}
-      <Jumbotron>
+      <Jumbotron style={{backgroundColor: props.theme[2]}}>
         <Media>
           <Image
             style={{width:'50%', height:'auto'}}
@@ -46,14 +38,13 @@ const Home = (props) => {
           />
           <Media.Body>
             <h5>Project Name</h5>
-            <p>this project is about this and that</p>
+            <p>Future project</p>
             <Nav.Link>Github</Nav.Link>
             <Nav.Link>Heroku</Nav.Link>
           </Media.Body>
         </Media>
       </Jumbotron>
     </Container>
-    </>
   )
 }
 

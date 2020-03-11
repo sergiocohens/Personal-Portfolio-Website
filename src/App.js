@@ -5,6 +5,7 @@ import { Switch, Route, Link } from 'react-router-dom'
 import Home from './Components/Home'
 import About from './Components/About'
 import Contact from './Components/Contact'
+import Theme from './Components/Theme'
 
 class App extends React.Component {
   state = {
@@ -29,10 +30,14 @@ class App extends React.Component {
         })
       break;
       default:
-      this.setState({
-        theme: []
-      })
+      break
     }
+  }
+
+  customTheme = (newTheme) => {
+    this.setState({
+      theme: newTheme
+    })
   }
 
   renderHome = (routeProps) => {
@@ -45,6 +50,10 @@ class App extends React.Component {
 
   renderContact = (routeProps) => {
     return <Contact {...this.state} changeTheme={this.changeTheme} {...routeProps} />
+  }
+
+  renderTheme = (routeProps) => {
+    return <Theme {...this.state} changeTheme={this.changeTheme} customTheme={this.customTheme} {...routeProps} />
   }
 
   render() {
@@ -63,7 +72,7 @@ class App extends React.Component {
         `}
       </style>
       <Container fluid='true'>
-        <Navbar style={{ backgroundColor: theme[2] }} fixed='top'>
+        <Navbar style={{ backgroundColor: theme[3] }} fixed='top'>
           <Container>
           <Nav>
             <Nav.Link>
@@ -77,8 +86,9 @@ class App extends React.Component {
             </Nav.Link>
             <NavDropdown title={<span style={{ color: theme[0]}}>Theme</span>}>
               <NavDropdown.Item onClick={this.changeTheme}>Classic</NavDropdown.Item>
-              <NavDropdown.Item onClick={this.changeTheme}>80s</NavDropdown.Item>
               <NavDropdown.Item onClick={this.changeTheme}>Green</NavDropdown.Item>
+              <NavDropdown.Item onClick={this.changeTheme}>80s</NavDropdown.Item>
+              <NavDropdown.Item><Link to='/personal-portfolio-website/theme'>Custom</Link></NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Navbar.Brand style={{ color: theme[0] }}>C-S</Navbar.Brand>
@@ -89,6 +99,7 @@ class App extends React.Component {
         <Route exact path='/personal-portfolio-website' render={this.renderHome}/>
         <Route path='/personal-portfolio-website/about' render={this.renderAbout}/>
         <Route path='/personal-portfolio-website/contact' render={this.renderContact}/>
+        <Route path='/personal-portfolio-website/theme' render={this.renderTheme}/>
       </Switch>
       <br/>
       </div>
