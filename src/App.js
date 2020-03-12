@@ -9,14 +9,14 @@ import Theme from './Components/Theme'
 
 class App extends React.Component {
   state = {
-    theme: ['black','white', 'lightgray', 'darkgray', 'darkred']
+    theme: ['black','white', 'lightgray', 'white', 'darkred']
   }
 
   changeTheme = (event) => {
     switch (event.target.innerText) {
       case 'Classic':
         this.setState({
-          theme: ['black','white', 'lightgray', 'darkgray', 'darkred']
+          theme: ['black','white', 'lightgray', 'white', 'darkred']
         })
       break;
       case '80s':

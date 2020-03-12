@@ -1,6 +1,10 @@
 import React from 'react'
-import { Container, Form, Button} from 'react-bootstrap'
+import { Container, Form, Button } from 'react-bootstrap'
 import * as emailjs from 'emailjs-com'
+import hihat from '../assets/hihat.mp3'
+import snare from '../assets/snare.mp3'
+import clap from '../assets/clap.mp3'
+import kick from '../assets/kick.mp3'
 
 class Contact extends React.Component {
   state = {
@@ -35,11 +39,12 @@ class Contact extends React.Component {
    this.setState({
      thanks: true
    })
+   let message = this.state.message + ' (sent by: ' + this.state.name + ')'
    let templateParams = {
       from_name: this.state.email,
       to_name: 'sergiocohensalama@gmail.com',
       subject: this.state.number,
-      message_html: this.state.message + ' ' + '(' + 'sent by:' + ' '+ this.state.name + ')'
+      message_html: message
      }
     await emailjs.send(
       'gmail',
@@ -55,7 +60,28 @@ class Contact extends React.Component {
       message: ''
     })
    }
- }
+  }
+
+  playHiHat = () => {
+    let hihat = document.getElementsByClassName('audio-element')[0]
+    hihat.volume = 0.2
+    hihat.play()
+  }
+
+  playSnare = () => {
+    let snare = document.getElementsByClassName('audio-element')[1]
+    snare.play()
+  }
+
+  playClap = () => {
+    let clap = document.getElementsByClassName('audio-element')[2]
+    clap.play()
+  }
+
+  playKick = () => {
+    let kick = document.getElementsByClassName('audio-element')[3]
+    kick.play()
+  }
 
   render() {
     return (
@@ -131,7 +157,23 @@ class Contact extends React.Component {
             <Button variant='theme' type="submit">Send</Button>
           </Container>
         </Form>
+        <br/>
+        <br/>
+        <div className='right'>
+          <h3 className='title'>Drum Machine</h3>
+        </div>
+        <br/>
+        <Container style={{display: 'flex', flexWrap:'wrap', justifyContent:'space-around'}}>
+          <Button onClick={this.playHiHat} style={{width:'120px', height:'120px', margin:'5px'}} variant='theme'>HIHAT</Button>
+          <Button onClick={this.playSnare} style={{width:'120px', height:'120px', margin:'5px'}} variant='theme'>SNARE</Button>
+          <Button onClick={this.playClap} style={{width:'120px', height:'120px', margin:'5px'}} variant='theme'>CLAP</Button>
+          <Button onClick={this.playKick} style={{width:'120px', height:'120px', margin:'5px'}} variant='theme'>KICK</Button>
+        </Container>
       </Container>
+      <audio className='audio-element'><source src={hihat}></source></audio>
+      <audio className='audio-element'><source src={snare}></source></audio>
+      <audio className='audio-element'><source src={clap}></source></audio>
+      <audio className='audio-element'><source src={kick}></source></audio>
       </>
     )
   }

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Card, Image, Nav } from 'react-bootstrap'
+import { Container, Card, Image, Nav, Jumbotron } from 'react-bootstrap'
 import pic from '../assets/c-s.jpg'
 import react from '../assets/react.png'
 
@@ -24,30 +24,33 @@ const About = (props) => {
         </Card.Body>
       </Card>
       <br/>
+      <br/>
       <div className='right'>
         <h3 className='title'>Technologies</h3>
       </div>
       <br/>
-      <Container style={{display:'flex', flexWrap:'wrap', justifyContent: 'space-around', width: '100%'}}>
+      <br/>
+      <Jumbotron style={{display:'flex', flexWrap:'wrap', justifyContent: 'space-around', width: '100%', backgroundColor: props.theme[2]}}>
         <Image style={{ width:'90px', padding:'10px'}} src={react}/>
-        //<Image style={{ width:'90px', padding:'10px'}} src='https://cdn2.iconfinder.com/data/icons/nodejs-1/512/nodejs-512.png'/>
-        //<Image style={{ width:'90px', padding:'10px'}} src='https://cdn.iconscout.com/icon/free/png-256/postgresql-11-1175122.png'/>
-        //<Image style={{ width:'90px', padding:'10px'}} src='https://cdn0.iconfinder.com/data/icons/social-network-7/50/22-512.png'/>
-        //<Image style={{ width:'90px', padding:'10px'}} src='https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/css3-512.png'/>
-      </Container>
+        <Image style={{ width:'90px', padding:'10px'}} src='https://cdn2.iconfinder.com/data/icons/nodejs-1/512/nodejs-512.png'/>
+        <Image style={{ width:'90px', padding:'10px'}} src='https://cdn.iconscout.com/icon/free/png-256/postgresql-11-1175122.png'/>
+        <Image style={{ width:'90px', padding:'10px'}} src='https://cdn0.iconfinder.com/data/icons/social-network-7/50/22-512.png'/>
+        <Image style={{ width:'90px', padding:'10px'}} src='https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/css3-512.png'/>
+      </Jumbotron>
       <br/>
       <div className='right'>
         <h3 className='title'>Links</h3>
       </div>
       <br/>
-      <Container style={{display:'flex', flexWrap:'wrap', justifyContent: 'space-between', width: '75%'}}>
+      <br/>
+      <Jumbotron style={{display:'flex', flexWrap:'wrap', justifyContent: 'space-around', width: '100%', backgroundColor: props.theme[2]}}>
         <Nav.Link href='https://github.com/sergiocohens' target='_blank'>
-        //  <Image style={{width: '220px', padding:'10px'}} src='https://pngimg.com/uploads/github/github_PNG65.png'/>
+          <Image style={{width: '220px', padding:'10px'}} src='https://pngimg.com/uploads/github/github_PNG65.png'/>
         </Nav.Link>
         <Nav.Link href='https://www.linkedin.com/in/sergio-cohen-salama/' target='blank'>
-          //<Image style={{width: '220px', padding:'10px'}} src='https://cdn.worldvectorlogo.com/logos/linkedin.svg'/>
+          <Image style={{width: '220px', padding:'10px'}} src='https://cdn.worldvectorlogo.com/logos/linkedin.svg'/>
         </Nav.Link>
-      </Container>
+      </Jumbotron>
     </Container>
     </>
   )
