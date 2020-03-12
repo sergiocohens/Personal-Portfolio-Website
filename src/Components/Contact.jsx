@@ -1,9 +1,14 @@
 import React from 'react'
 import { Container, Form, Button} from 'react-bootstrap'
+import * as emailjs from 'emailjs-com'
 
 class Contact extends React.Component {
   state = {
     thanks: false,
+    name: '',
+    email: '',
+    number: '',
+    message: '',
     theme: this.props.theme
   }
 
@@ -15,14 +20,41 @@ class Contact extends React.Component {
     }
   }
 
+  handleChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
   handleSubmit = async (event) => {
    const form = event.currentTarget;
    if (form.checkValidity() === false) {
     event.preventDefault()
-   }
-   await this.setState({
+   } else {
+   event.preventDefault()
+   this.setState({
      thanks: true
    })
+   let templateParams = {
+      from_name: this.state.email,
+      to_name: 'sergiocohensalama@gmail.com',
+      subject: this.state.number,
+      message_html: this.state.message + ' ' + '(' + 'sent by:' + ' '+ this.state.name + ')'
+     }
+    await emailjs.send(
+      'gmail',
+      'template_ddK7p339',
+       templateParams,
+      'user_44ARKH3bzAp2r3YX8iHgr'
+     )
+    this.setState({
+      thanks: false,
+      name: '',
+      email: '',
+      number: '',
+      message: ''
+    })
+   }
  }
 
   render() {
@@ -74,38 +106,31 @@ class Contact extends React.Component {
               <div className='left'>
                 <Form.Label><h6>Your Name</h6></Form.Label>
               </div>
-              <Form.Control required type="text"/>
+              <Form.Control name='name' value={this.state.name} onChange={this.handleChange} required type="text"/>
           </Form.Group>
           <Form.Group>
               <div className='left'>
                 <Form.Label><h6>Your Email</h6></Form.Label>
               </div>
-              <Form.Control required type="email" placeholder='example@domain.com'/>
+              <Form.Control name='email' value={this.state.email} onChange={this.handleChange} required type="email" placeholder='example@domain.com'/>
           </Form.Group>
           <Form.Group>
               <div className='left'>
                 <Form.Label><h6>Your Number</h6></Form.Label>
               </div>
-              <Form.Control required type="tel" placeholder='123-456-7890' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
+              <Form.Control name='number' value={this.state.number} onChange={this.handleChange} type="tel" placeholder='123-456-7890' pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"/>
           </Form.Group>
           <Form.Group>
               <div className='left'>
                 <Form.Label><h6>Message</h6></Form.Label>
               </div>
-              <Form.Control required as='textarea' rows="5"/>
+              <Form.Control name='message' value={this.state.message} message={this.state.message} onChange={this.handleChange} required as='textarea' rows="5"/>
           </Form.Group>
-          <div className='right'>
-            <style type='text/css'>
-            {`
-
-            `}
-            </style>
+          <Container style={{display: 'flex', justifyContent: 'space-between'}}>
+            {(this.state.thanks ? <h3 style={{alignSelf: 'left'}}>Thanks!</h3> : <p></p>)}
             <Button variant='theme' type="submit">Send</Button>
-          </div>
+          </Container>
         </Form>
-        <br/>
-        {(this.state.thanks ? <h3>Thanks!</h3> : <p></p>)}
-        <br/>
       </Container>
       </>
     )

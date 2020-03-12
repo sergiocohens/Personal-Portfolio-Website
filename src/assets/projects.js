@@ -12,7 +12,7 @@ const project1 = {
 const project2 = {
   name: 'Music Player',
   image: musicplayerPic,
-  body: 'A desktop-browser music app that makes song transitions seamless.',
+  body: 'A desktop-browser music app with seamless song transitions.',
   github: 'https://github.com/sergiocohens/Music-Player-1',
   heroku: 'https://nunca-estuve-aqui.herokuapp.com/'
 }
