@@ -1,7 +1,11 @@
 import React from 'react'
 import { Container, Card, Image, Nav, Jumbotron } from 'react-bootstrap'
 import pic from '../assets/c-s.jpg'
-import react from '../assets/react.png'
+import reactIcon from '../assets/react.png'
+import nodeIcon from '../assets/node.png'
+import postgresIcon from '../assets/postgres.png'
+import html5Icon from '../assets/html5.png'
+import css3Icon from '../assets/css3.png'
 
 const About = (props) => {
   return (
@@ -31,11 +35,11 @@ const About = (props) => {
       <br/>
       <br/>
       <Jumbotron style={{display:'flex', flexWrap:'wrap', justifyContent: 'space-around', width: '100%', backgroundColor: props.theme[2]}}>
-        <Image style={{ width:'90px', padding:'10px'}} src={react}/>
-        <Image style={{ width:'90px', padding:'10px'}} src='https://cdn2.iconfinder.com/data/icons/nodejs-1/512/nodejs-512.png'/>
-        <Image style={{ width:'90px', padding:'10px'}} src='https://cdn.iconscout.com/icon/free/png-256/postgresql-11-1175122.png'/>
-        <Image style={{ width:'90px', padding:'10px'}} src='https://cdn0.iconfinder.com/data/icons/social-network-7/50/22-512.png'/>
-        <Image style={{ width:'90px', padding:'10px'}} src='https://cdn4.iconfinder.com/data/icons/flat-brand-logo-2/512/css3-512.png'/>
+        <Image style={{ width:'90px', padding:'10px'}} src={reactIcon}/>
+        <Image style={{ width:'90px', padding:'10px'}} src={nodeIcon}/>
+        <Image style={{ width:'90px', padding:'10px'}} src={postgresIcon}/>
+        <Image style={{ width:'90px', padding:'10px'}} src={html5Icon}/>
+        <Image style={{ width:'90px', padding:'10px'}} src={css3Icon}/>
       </Jumbotron>
       <br/>
       <div className='right'>
