@@ -59,7 +59,7 @@ class App extends React.Component {
   render() {
     const { theme } = this.state
     return (
-      <div className="App" style={{ backgroundColor: theme[1]}}>
+      <div className="App" style={{ backgroundColor: theme[1] }}>
       <style type="text/css">
         {`
           h3, p, h5, h6 {
@@ -95,12 +95,16 @@ class App extends React.Component {
           </Container>
         </Navbar>
       </Container>
+      <br/>
       <Switch>
         <Route exact path='/personal-portfolio-website' render={this.renderHome}/>
         <Route path='/personal-portfolio-website/about' render={this.renderAbout}/>
         <Route path='/personal-portfolio-website/contact' render={this.renderContact}/>
         <Route path='/personal-portfolio-website/theme' render={this.renderTheme}/>
       </Switch>
+      <br/>
+      <br/>
+      <br/>
       <br/>
       </div>
     )
