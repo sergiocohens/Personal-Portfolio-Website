@@ -88,7 +88,7 @@ class App extends React.Component {
               <NavDropdown.Item onClick={this.changeTheme}>Classic</NavDropdown.Item>
               <NavDropdown.Item onClick={this.changeTheme}>Green</NavDropdown.Item>
               <NavDropdown.Item onClick={this.changeTheme}>80s</NavDropdown.Item>
-              <NavDropdown.Item><Link to='/personal-portfolio-website/theme'>Custom</Link></NavDropdown.Item>
+              <NavDropdown.Item><Link to='/theme'>Custom</Link></NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Navbar.Brand style={{ color: theme[0] }}>C-S</Navbar.Brand>
@@ -97,10 +97,10 @@ class App extends React.Component {
       </Container>
       <br/>
       <Switch>
-        <Route exact path='/personal-portfolio-website' render={this.renderHome}/>
-        <Route path='/personal-portfolio-website/about' render={this.renderAbout}/>
-        <Route path='/personal-portfolio-website/contact' render={this.renderContact}/>
-        <Route path='/personal-portfolio-website/theme' render={this.renderTheme}/>
+        <Route exact path='/' render={this.renderHome}/>
+        <Route path='/about' render={this.renderAbout}/>
+        <Route path='/contact' render={this.renderContact}/>
+        <Route path='/theme' render={this.renderTheme}/>
       </Switch>
       <br/>
       <br/>
