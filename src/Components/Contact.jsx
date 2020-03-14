@@ -64,23 +64,26 @@ class Contact extends React.Component {
 
   playHiHat = () => {
     let hihat = document.getElementsByClassName('audio-element')[0]
-    hihat.volume = 0.2
     hihat.play()
+    setTimeout(() => hihat.load(), 200)
   }
 
   playSnare = () => {
     let snare = document.getElementsByClassName('audio-element')[1]
     snare.play()
+    setTimeout(() => snare.load(), 250)
   }
 
   playClap = () => {
     let clap = document.getElementsByClassName('audio-element')[2]
     clap.play()
+    setTimeout(() => clap.load(), 450)
   }
 
   playKick = () => {
     let kick = document.getElementsByClassName('audio-element')[3]
     kick.play()
+    setTimeout(() => kick.load(), 200)
   }
 
   render() {

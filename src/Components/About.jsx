@@ -34,7 +34,7 @@ const About = (props) => {
       </div>
       <br/>
       <br/>
-      <Jumbotron style={{display:'flex', flexWrap:'wrap', justifyContent: 'space-around', width: '100%', backgroundColor: props.theme[2]}}>
+      <Jumbotron style={{display:'flex', flexWrap:'wrap', justifyContent: 'space-around', width: '100%', height: 'auto', backgroundColor: props.theme[2]}}>
         <Image style={{ width:'90px', padding:'10px'}} src={reactIcon}/>
         <Image style={{ width:'90px', padding:'10px'}} src={nodeIcon}/>
         <Image style={{ width:'90px', padding:'10px'}} src={postgresIcon}/>
@@ -47,7 +47,7 @@ const About = (props) => {
       </div>
       <br/>
       <br/>
-      <Jumbotron style={{display:'flex', flexWrap:'wrap', justifyContent: 'space-around', width: '100%', backgroundColor: props.theme[2]}}>
+      <Jumbotron style={{display:'flex', flexWrap:'wrap', justifyContent: 'space-around', width: '100%', height:'auto', backgroundColor: props.theme[2]}}>
         <Nav.Link href='https://github.com/sergiocohens' target='_blank'>
           <Image style={{width: '220px', padding:'10px'}} src='https://pngimg.com/uploads/github/github_PNG65.png'/>
         </Nav.Link>
