@@ -91,7 +91,7 @@ class App extends React.Component {
               <NavDropdown.Item><Link to='/theme'>Custom</Link></NavDropdown.Item>
             </NavDropdown>
           </Nav>
-          <Navbar.Brand style={{ color: theme[0] }}>C-S</Navbar.Brand>
+          <Navbar.Brand style={{ color: theme[0] }}><h3>C-S</h3></Navbar.Brand>
           </Container>
         </Navbar>
       </Container>
