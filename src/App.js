@@ -76,13 +76,13 @@ class App extends React.Component {
           <Container>
           <Nav>
             <Nav.Link>
-              <Link to='/personal-portfolio-website'>Home</Link>
+              <Link to='/'>Home</Link>
             </Nav.Link>
             <Nav.Link>
-              <Link to='/personal-portfolio-website/about'>About</Link>
+              <Link to='/about'>About</Link>
             </Nav.Link>
             <Nav.Link>
-              <Link to='/personal-portfolio-website/contact'>Contact</Link>
+              <Link to='/contact'>Contact</Link>
             </Nav.Link>
             <NavDropdown title={<span style={{ color: theme[0]}}>Theme</span>}>
               <NavDropdown.Item onClick={this.changeTheme}>Classic</NavDropdown.Item>
