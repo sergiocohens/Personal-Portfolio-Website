@@ -35,11 +35,11 @@ const About = (props) => {
       <br/>
       <br/>
       <Jumbotron style={{display:'flex', flexWrap:'wrap', justifyContent: 'space-around', width: '100%', backgroundColor: props.theme[2]}}>
-        <Image style={{width: '95px', height: 'auto', padding:'10px'}} src={reactIcon}/>
-        <Image style={{width: '95px', height: 'auto', padding:'10px'}} src={nodeIcon}/>
-        <Image style={{width: '95px', height: 'auto', padding:'10px'}} src={postgresIcon}/>
-        <Image style={{width: '95px', height: 'auto', padding:'10px'}} src={html5Icon}/>
-        <Image style={{width: '95px', height: 'auto', padding:'10px'}} src={css3Icon}/>
+        <Image className='icon' style={{width: '95px', height: 'auto', padding:'10px'}} src={reactIcon}/>
+        <Image className='icon' style={{width: '95px', height: 'auto', padding:'10px'}} src={nodeIcon}/>
+        <Image className='icon' style={{width: '95px', height: 'auto', padding:'10px'}} src={postgresIcon}/>
+        <Image className='icon' style={{width: '95px', height: 'auto', padding:'10px'}} src={html5Icon}/>
+        <Image className='icon' style={{width: '95px', height: 'auto', padding:'10px'}} src={css3Icon}/>
       </Jumbotron>
       <br/>
       <div className='right'>
