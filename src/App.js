@@ -60,52 +60,51 @@ class App extends React.Component {
     const { theme } = this.state
     return (
       <div className="App" style={{ backgroundColor: theme[1] }}>
-      <style type="text/css">
-        {`
-          h3, p, h5, h6 {
-            color: ${theme[0]}
-          }
+        <style type="text/css">
+          {`
+            h3, p, h5, h6 {
+              color: ${theme[0]}
+            }
 
-          a {
-            color: ${theme[4]}
-          }
-        `}
-      </style>
-      <Container fluid='true'>
-        <Navbar style={{ backgroundColor: theme[3] }} fixed='top'>
-          <Container>
-          <Nav>
-            <Nav.Link>
-              <Link to='/'>Home</Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to='/about'>About</Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to='/contact'>Contact</Link>
-            </Nav.Link>
-            <NavDropdown title={<span style={{ color: theme[0]}}>Theme</span>}>
-              <NavDropdown.Item onClick={this.changeTheme}>Classic</NavDropdown.Item>
-              <NavDropdown.Item onClick={this.changeTheme}>Green</NavDropdown.Item>
-              <NavDropdown.Item onClick={this.changeTheme}>80s</NavDropdown.Item>
-              <NavDropdown.Item><Link to='/theme'>Custom</Link></NavDropdown.Item>
-            </NavDropdown>
-          </Nav>
-          <Navbar.Brand style={{ color: theme[0] }}>C-S</Navbar.Brand>
-          </Container>
-        </Navbar>
-      </Container>
-      <br/>
-      <Switch>
-        <Route exact path='/' render={this.renderHome}/>
-        <Route path='/about' render={this.renderAbout}/>
-        <Route path='/contact' render={this.renderContact}/>
-        <Route path='/theme' render={this.renderTheme}/>
-      </Switch>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+            a {
+              color: ${theme[4]}
+            }
+          `}
+        </style>
+        <Container fluid='true'>
+          <Navbar style={{ backgroundColor: theme[3] }} fixed='top'>
+            <Container>
+            <Nav>
+              <Nav.Link>
+                <Link to='/'>Home</Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to='/about'>About</Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to='/contact'>Contact</Link>
+              </Nav.Link>
+              <NavDropdown title={<span style={{ color: theme[0]}}>Theme</span>}>
+                <NavDropdown.Item onClick={this.changeTheme}>Classic</NavDropdown.Item>
+                <NavDropdown.Item onClick={this.changeTheme}>Green</NavDropdown.Item>
+                <NavDropdown.Item onClick={this.changeTheme}>80s</NavDropdown.Item>
+                <NavDropdown.Item><Link to='/theme'>Custom</Link></NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+            <Navbar.Brand style={{ color: theme[0] }}><h4>C-S</h4></Navbar.Brand>
+            </Container>
+          </Navbar>
+        </Container>
+        <br/>
+        <Switch>
+          <Route exact path='/' render={this.renderHome}/>
+          <Route path='/about' render={this.renderAbout}/>
+          <Route path='/contact' render={this.renderContact}/>
+          <Route path='/theme' render={this.renderTheme}/>
+        </Switch>
+        <br/>
+        <br/>
+        <br/>
       </div>
     )
   }

@@ -33,19 +33,17 @@ const About = (props) => {
         <h3 className='title'>Technologies</h3>
       </div>
       <br/>
-      <br/>
       <Jumbotron style={{display:'flex', flexWrap:'wrap', justifyContent: 'space-around', width: '100%', backgroundColor: props.theme[2]}}>
-        <Image className='icon' style={{width: '95px', height: 'auto', padding:'10px'}} src={reactIcon}/>
-        <Image className='icon' style={{width: '95px', height: 'auto', padding:'10px'}} src={nodeIcon}/>
-        <Image className='icon' style={{width: '95px', height: 'auto', padding:'10px'}} src={postgresIcon}/>
-        <Image className='icon' style={{width: '95px', height: 'auto', padding:'10px'}} src={html5Icon}/>
-        <Image className='icon' style={{width: '95px', height: 'auto', padding:'10px'}} src={css3Icon}/>
+        <Image className='icon' src={reactIcon}/>
+        <Image className='icon' src={nodeIcon}/>
+        <Image className='icon' src={postgresIcon}/>
+        <Image className='icon' src={html5Icon}/>
+        <Image className='icon' src={css3Icon}/>
       </Jumbotron>
       <br/>
       <div className='right'>
         <h3 className='title'>Links</h3>
       </div>
-      <br/>
       <br/>
       <Jumbotron style={{display:'flex', flexWrap:'wrap', justifyContent: 'space-around', width: '100%', backgroundColor: props.theme[2]}}>
         <Nav.Link href='https://github.com/sergiocohens' target='_blank'>

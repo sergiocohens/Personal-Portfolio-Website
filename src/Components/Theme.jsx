@@ -40,7 +40,7 @@ class Theme extends React.Component {
           <h3 className='title'>Custom Theme</h3>
         </div>
         <br/>
-        <Jumbotron style={{backgroundColor: theme[2]}}>
+        <Jumbotron style={{backgroundColor: theme[2], padding:'52px'}}>
           <br/>
           {options.map((option) => {
             return (
@@ -55,7 +55,7 @@ class Theme extends React.Component {
                 `}
                 </style>
                 <h5>{option}:</h5>
-                <Dropdown alignRight='false' onSelect={this.handleChange}>
+                <Dropdown drop='down' onSelect={this.handleChange}>
                   <Dropdown.Toggle style={{backgroundColor: 'white', color: 'black', borderColor: 'white'}}>{theme[themeOptionsAndIndexes[option]]}</Dropdown.Toggle>
                   <Dropdown.Menu>
                     {colors.map((color) =>
