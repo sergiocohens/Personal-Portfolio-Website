@@ -1,5 +1,5 @@
 import greenlistPic from './greenlist.png'
-import musicplayerPic from './nuncaestuveaqui.jpg'
+import vinyleffectPic from './nuncaestuveaqui.jpg'
 
 const project1 = {
   name: 'Greenlist',
@@ -10,8 +10,8 @@ const project1 = {
 }
 
 const project2 = {
-  name: 'Music Player',
-  image: musicplayerPic,
+  name: 'vinyl effect',
+  image: vinyleffectPic,
   body: 'A desktop-browser music app with seamless song transitions.',
   github: 'https://github.com/sergiocohens/Music-Player-1',
   heroku: 'https://nunca-estuve-aqui.herokuapp.com/'
