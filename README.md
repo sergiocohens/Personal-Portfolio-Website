@@ -34,4 +34,4 @@ To create this website I used:
 
 ## Live Version
 
-[cohen-salama.space](www.cohen-salama.space)
+[cohen-salama.space](http://www.cohen-salama.space)
