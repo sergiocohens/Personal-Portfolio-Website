@@ -1,9 +1,14 @@
+##Description
+
 This is the repository for Sergio Cohen-Salama's personal website as a developer. It will showcase a selection of his projects, along with a brief bio and a contact form.
 
-WIREFRAMES
+##Wireframes
 
-homepage:
-!['homepage'](IMG_4061.JPG)
+projects:  
+!['projects'](Projects-2.jpg)
 
-about & contact:
-!['about&contact'](IMG_4064.JPG)
+about:  
+!['about'](About-2.jpg)
+
+contact:  
+!['contact'](Contact-2.jpg)
