@@ -5,7 +5,7 @@ const project1 = {
   name: 'Greenlist',
   image: greenlistPic,
   body: 'An app that makes getting eco-friendly materials easy for designers.',
-  github: 'https://github.com/joseph-p-pasaoa/greenlistRegistry__FSWeb',
+  github: 'https://github.com/joseph-p-pasaoa/greenlist__FSWeb',
   heroku: 'https://greenlist-registry.herokuapp.com'
 }
 
