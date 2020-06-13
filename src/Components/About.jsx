@@ -46,10 +46,10 @@ const About = (props) => {
       </div>
       <br/>
       <Jumbotron style={{display:'flex', flexWrap:'wrap', justifyContent: 'space-around', width: '100%', backgroundColor: props.theme[2]}}>
-        <Nav.Link href='https://github.com/sergiocohens' target='_blank'>
+        <Nav.Link href='https://github.com/cohen-salama' target='_blank'>
           <Image style={{width: '220px', padding:'10px'}} src='https://pngimg.com/uploads/github/github_PNG65.png'/>
         </Nav.Link>
-        <Nav.Link href='https://www.linkedin.com/in/sergio-cohen-salama/' target='blank'>
+        <Nav.Link href='https://www.linkedin.com/in/sergio-cohen-salama/' target='_blank'>
           <Image style={{width: '220px', padding:'10px'}} src='https://cdn.worldvectorlogo.com/logos/linkedin.svg'/>
         </Nav.Link>
       </Jumbotron>
