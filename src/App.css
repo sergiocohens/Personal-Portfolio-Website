@@ -15,6 +15,12 @@
 .title {
   display: inline-flex;
   border-style: solid;
+  padding: 3px;
+}
+
+.project-body {
+  width: 80%;
+  margin-left: 10%;
 }
 
 .icon {

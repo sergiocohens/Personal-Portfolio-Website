@@ -21,9 +21,9 @@ const Home = (props) => {
               />
               <Media.Body>
                 <h5>{project.name}</h5>
-                <p>{project.body}</p>
-                  <Nav.Link href={project.github} target='_blank'>Github</Nav.Link>
-                  <Nav.Link href={project.heroku} target='_blank'>Heroku</Nav.Link>
+                <p className='project-body'>{project.body}</p>
+                <Nav.Link href={project.github} target='_blank'>Github</Nav.Link>
+                <Nav.Link href={project.heroku} target='_blank'>Heroku</Nav.Link>
               </Media.Body>
             </Media>
           </Jumbotron>

@@ -1,10 +1,10 @@
 import React from 'react'
 import { Container, Form, Button } from 'react-bootstrap'
 import * as emailjs from 'emailjs-com'
-import hihat from '../assets/hihat.mp3'
-import snare from '../assets/snare.mp3'
-import clap from '../assets/clap.mp3'
-import kick from '../assets/kick.mp3'
+import HiHat from './Drums/HiHat'
+import Snare from './Drums/Snare'
+import Clap from './Drums/Clap'
+import Kick from './Drums/Kick'
 
 class Contact extends React.Component {
   state = {
@@ -31,59 +31,39 @@ class Contact extends React.Component {
   }
 
   handleSubmit = async (event) => {
-   const form = event.currentTarget;
-   if (form.checkValidity() === false) {
-    event.preventDefault()
-   } else {
-   event.preventDefault()
-   this.setState({
-     thanks: true
-   })
-   let message = this.state.message + ' (sent by: ' + this.state.name + ')'
-   let templateParams = {
-      from_name: this.state.email,
-      to_name: 'sergiocohensalama@gmail.com',
-      subject: this.state.number,
-      message_html: message
-     }
-    await emailjs.send(
-      'gmail',
-      'template_ddK7p339',
-       templateParams,
-      'user_44ARKH3bzAp2r3YX8iHgr'
-     )
-    this.setState({
-      thanks: false,
-      name: '',
-      email: '',
-      number: '',
-      message: ''
-    })
-   }
-  }
+    const form = event.currentTarget;
+    if (form.checkValidity() === false) {
+      event.preventDefault()
+    } else {
+      event.preventDefault()
 
-  playHiHat = () => {
-    let hihat = document.getElementsByClassName('audio-element')[0]
-    hihat.play()
-    setTimeout(() => hihat.load(), 200)
-  }
+      this.setState({
+        thanks: true
+      })
 
-  playSnare = () => {
-    let snare = document.getElementsByClassName('audio-element')[1]
-    snare.play()
-    setTimeout(() => snare.load(), 250)
-  }
+      let message = this.state.message + ' (sent by: ' + this.state.name + ')'
+      let templateParams = {
+        from_name: this.state.email,
+        to_name: 'sergiocohensalama@gmail.com',
+        subject: this.state.number,
+        message_html: message
+      }
+      
+      await emailjs.send(
+        'gmail',
+        'template_ddK7p339',
+        templateParams,
+        'user_44ARKH3bzAp2r3YX8iHgr'
+      )
 
-  playClap = () => {
-    let clap = document.getElementsByClassName('audio-element')[2]
-    clap.play()
-    setTimeout(() => clap.load(), 450)
-  }
-
-  playKick = () => {
-    let kick = document.getElementsByClassName('audio-element')[3]
-    kick.play()
-    setTimeout(() => kick.load(), 200)
+      this.setState({
+        thanks: false,
+        name: '',
+        email: '',
+        number: '',
+        message: ''
+      })
+    }
   }
 
   render() {
@@ -167,16 +147,12 @@ class Contact extends React.Component {
         </div>
         <br/>
         <Container style={{display: 'flex', flexWrap:'wrap', justifyContent:'space-around'}}>
-          <Button onClick={this.playHiHat} style={{width:'120px', height:'120px', margin:'5px'}} variant='theme'>HIHAT</Button>
-          <Button onClick={this.playSnare} style={{width:'120px', height:'120px', margin:'5px'}} variant='theme'>SNARE</Button>
-          <Button onClick={this.playClap} style={{width:'120px', height:'120px', margin:'5px'}} variant='theme'>CLAP</Button>
-          <Button onClick={this.playKick} style={{width:'120px', height:'120px', margin:'5px'}} variant='theme'>KICK</Button>
+          <HiHat/>
+          <Snare/>
+          <Clap/>
+          <Kick/>
         </Container>
       </Container>
-      <audio className='audio-element'><source src={hihat}></source></audio>
-      <audio className='audio-element'><source src={snare}></source></audio>
-      <audio className='audio-element'><source src={clap}></source></audio>
-      <audio className='audio-element'><source src={kick}></source></audio>
       </>
     )
   }
