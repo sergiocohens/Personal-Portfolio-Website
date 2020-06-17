@@ -1,20 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.618deeeb.chunk.css",
-    "main.js": "/static/js/main.9988050f.chunk.js",
-    "main.js.map": "/static/js/main.9988050f.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.891e2277.js",
-    "runtime-main.js.map": "/static/js/runtime-main.891e2277.js.map",
+    "main.css": "/static/css/main.20b94873.chunk.css",
+    "main.js": "/static/js/main.4f2c52f5.chunk.js",
+    "main.js.map": "/static/js/main.4f2c52f5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.1d7ade1b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.1d7ade1b.js.map",
     "static/css/2.de424728.chunk.css": "/static/css/2.de424728.chunk.css",
-    "static/js/2.b0c7ccce.chunk.js": "/static/js/2.b0c7ccce.chunk.js",
-    "static/js/2.b0c7ccce.chunk.js.map": "/static/js/2.b0c7ccce.chunk.js.map",
+    "static/js/2.aa64d8af.chunk.js": "/static/js/2.aa64d8af.chunk.js",
+    "static/js/2.aa64d8af.chunk.js.map": "/static/js/2.aa64d8af.chunk.js.map",
+    "static/js/3.97f79864.chunk.js": "/static/js/3.97f79864.chunk.js",
+    "static/js/3.97f79864.chunk.js.map": "/static/js/3.97f79864.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.636cc871f3af7db3c857729e439c4c35.js": "/precache-manifest.636cc871f3af7db3c857729e439c4c35.js",
+    "precache-manifest.5b67ddb6cb7ab6ddfbe2983cde6870a9.js": "/precache-manifest.5b67ddb6cb7ab6ddfbe2983cde6870a9.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.de424728.chunk.css.map": "/static/css/2.de424728.chunk.css.map",
-    "static/css/main.618deeeb.chunk.css.map": "/static/css/main.618deeeb.chunk.css.map",
-    "static/js/2.b0c7ccce.chunk.js.LICENSE.txt": "/static/js/2.b0c7ccce.chunk.js.LICENSE.txt",
+    "static/css/main.20b94873.chunk.css.map": "/static/css/main.20b94873.chunk.css.map",
+    "static/js/2.aa64d8af.chunk.js.LICENSE.txt": "/static/js/2.aa64d8af.chunk.js.LICENSE.txt",
+    "static/js/3.97f79864.chunk.js.LICENSE.txt": "/static/js/3.97f79864.chunk.js.LICENSE.txt",
     "static/media/c-s.jpg": "/static/media/c-s.c920c88a.jpg",
+    "static/media/choral.jpeg": "/static/media/choral.801a0c32.jpeg",
     "static/media/clap.mp3": "/static/media/clap.b6e70d83.mp3",
     "static/media/greenlist.png": "/static/media/greenlist.ca07d05d.png",
     "static/media/hihat.mp3": "/static/media/hihat.61cc40e2.mp3",
@@ -23,10 +27,10 @@
     "static/media/snare.mp3": "/static/media/snare.0fa1bf1f.mp3"
   },
   "entrypoints": [
-    "static/js/runtime-main.891e2277.js",
+    "static/js/runtime-main.1d7ade1b.js",
     "static/css/2.de424728.chunk.css",
-    "static/js/2.b0c7ccce.chunk.js",
-    "static/css/main.618deeeb.chunk.css",
-    "static/js/main.9988050f.chunk.js"
+    "static/js/2.aa64d8af.chunk.js",
+    "static/css/main.20b94873.chunk.css",
+    "static/js/main.4f2c52f5.chunk.js"
   ]
 }
