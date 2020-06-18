@@ -65,7 +65,7 @@ const About = (props) => {
           <Image className='link-img' src='https://pngimg.com/uploads/github/github_PNG65.png'/>
         </Nav.Link>
         <Nav.Link href='https://www.linkedin.com/in/sergio-cohen-salama/' target='_blank'>
-          <Image className='link-img' src='https://cdn.worldvectorlogo.com/logos/linkedin.svg'/>
+          <Image className='link-img' id='linkedin-img' src='https://cdn.worldvectorlogo.com/logos/linkedin.svg'/>
         </Nav.Link>
       </Jumbotron>
     </Container>
