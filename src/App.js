@@ -98,9 +98,9 @@ class App extends React.Component {
         <br/>
         <Switch>
           <Route exact path='/' render={this.renderHome}/>
-          <Route path={process.env.PUBLIC_URL + '/about'} render={this.renderAbout}/>
-          <Route path={process.env.PUBLIC_URL + '/contact'} render={this.renderContact}/>
-          <Route path={process.env.PUBLIC_URL + '/theme'} render={this.renderTheme}/>
+          <Route path={'/about'} render={this.renderAbout}/>
+          <Route path={'/contact'} render={this.renderContact}/>
+          <Route path={'/theme'} render={this.renderTheme}/>
         </Switch>
         <br/>
         <br/>
