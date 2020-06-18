@@ -21,12 +21,12 @@ class App extends React.Component {
       break;
       case '80s':
         this.setState({
-          theme: ['cyan','black','magenta','purple','lime']
+          theme: ['cyan','black','magenta','indigo','lime']
         })
       break;
       case 'Green':
         this.setState({
-          theme: ['white','teal','green','darkgreen','lightgreen']
+          theme: ['white','teal','green','green','lightgreen']
         })
       break;
       default:

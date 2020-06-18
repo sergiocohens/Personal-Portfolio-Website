@@ -1,10 +1,6 @@
 import React from 'react'
 import { Container, Form, Button } from 'react-bootstrap'
 import * as emailjs from 'emailjs-com'
-import HiHat from './Drums/HiHat'
-import Snare from './Drums/Snare'
-import Clap from './Drums/Clap'
-import Kick from './Drums/Kick'
 
 class Contact extends React.Component {
   state = {
@@ -69,47 +65,47 @@ class Contact extends React.Component {
   render() {
     return (
       <>
+      <style type="text/css">
+        {`
+          .form-control {
+            color: ${this.state.theme[0]};
+            background-color: ${this.state.theme[1]}
+          }
+
+          .form-control:focus {
+            color: ${this.state.theme[0]};
+            background-color: ${this.state.theme[1]};
+            border-color: ${this.state.theme[4]};
+            box-shadow: 0px 0px 1px ${this.state.theme[4]} inset, 0px 0px 8px ${this.state.theme[4]}
+          }
+
+          ::placeholder {
+            color: lightgray
+          }
+
+          .btn-theme {
+            background-color:${this.state.theme[2]}
+          }
+
+          .btn-theme {
+            color:${this.state.theme[0]}
+          }
+
+          .btn-theme:hover {
+            background-color: ${this.state.theme[3]}
+          }
+
+          .btn-theme:hover {
+            color:${this.state.theme[0]}
+          }
+        `}
+      </style>
       <Container>
         <br/>
         <div className='right'>
           <h3 className='title'>Contact Form</h3>
         </div>
         <br/>
-        <style type="text/css">
-          {`
-            .form-control {
-              color: ${this.state.theme[0]};
-              background-color: ${this.state.theme[1]}
-            }
-
-            .form-control:focus {
-              color: ${this.state.theme[0]};
-              background-color: ${this.state.theme[1]};
-              border-color: ${this.state.theme[4]};
-              box-shadow: 0px 0px 1px ${this.state.theme[4]} inset, 0px 0px 8px ${this.state.theme[4]}
-            }
-
-            ::placeholder {
-              color: lightgray
-            }
-
-            .btn-theme {
-              background-color:${this.state.theme[2]}
-            }
-
-            .btn-theme {
-              color:${this.state.theme[0]}
-            }
-
-            .btn-theme:hover {
-              background-color: ${this.state.theme[3]}
-            }
-
-            .btn-theme:hover {
-              color:${this.state.theme[0]}
-            }
-          `}
-        </style>
         <Form onSubmit={this.handleSubmit}>
           <Form.Group>
               <div className='left'>
@@ -141,17 +137,6 @@ class Contact extends React.Component {
           </Container>
         </Form>
         <br/>
-        <br/>
-        <div className='right'>
-          <h3 className='title'>Drum Machine</h3>
-        </div>
-        <br/>
-        <Container style={{display: 'flex', flexWrap:'wrap', justifyContent:'space-around'}}>
-          <HiHat/>
-          <Snare/>
-          <Clap/>
-          <Kick/>
-        </Container>
       </Container>
       </>
     )

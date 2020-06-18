@@ -1,5 +1,9 @@
 import React from 'react'
 import { Container, Dropdown, Jumbotron } from 'react-bootstrap'
+import HiHat from './Drums/HiHat'
+import Snare from './Drums/Snare'
+import Clap from './Drums/Clap'
+import Kick from './Drums/Kick'
 
 class Theme extends React.Component {
   state = {
@@ -34,6 +38,26 @@ class Theme extends React.Component {
   render() {
     const { theme, options, colors, themeOptionsAndIndexes } = this.state
     return (
+      <>
+      <style type="text/css">
+        {`
+          .btn-theme {
+            background-color:${theme[2]}
+          }
+
+          .btn-theme {
+            color:${theme[0]}
+          }
+
+          .btn-theme:hover {
+            background-color: ${theme[3]}
+          }
+
+          .btn-theme:hover {
+            color:${theme[0]}
+          }
+        `}
+      </style>
       <Container>
         <br/>
         <div className='right'>
@@ -69,7 +93,20 @@ class Theme extends React.Component {
             )
           })}
         </Jumbotron>
+        <br/>
+        <br/>
+        <div className='right'>
+          <h3 className='title'>Drum Machine</h3>
+        </div>
+        <br/>
+        <Container style={{display: 'flex', flexWrap:'wrap', justifyContent:'space-around'}}>
+          <HiHat/>
+          <Snare/>
+          <Clap/>
+          <Kick/>
+        </Container>
       </Container>
+      </>
     )
   }
 }

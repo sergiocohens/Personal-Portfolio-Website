@@ -20,7 +20,7 @@ const Home = (props) => {
                 alt={project.name}
               />
               <Media.Body>
-                <h5>{project.name}</h5>
+                <h4 style={{color: props.theme[0]}}>{project.name}</h4>
                 <p className='project-body'>{project.body}</p>
                 <Nav.Link href={project.github} target='_blank'>Github</Nav.Link>
                 <Nav.Link href={project.heroku} target='_blank'>Heroku</Nav.Link>
@@ -29,21 +29,6 @@ const Home = (props) => {
           </Jumbotron>
         )
       })}
-      <Jumbotron style={{backgroundColor: props.theme[2]}}>
-        <Media>
-          <Image
-            style={{width:'50%', height:'auto'}}
-            src='https://cdn.shopify.com/s/files/1/0533/2089/files/placeholder-images-image_large.png?format=jpg&quality=90&v=1530129081'
-            alt='placeholder'
-          />
-          <Media.Body>
-            <h5>Project Name</h5>
-            <p>Future project</p>
-            <Nav.Link>Github</Nav.Link>
-            <Nav.Link>Heroku</Nav.Link>
-          </Media.Body>
-        </Media>
-      </Jumbotron>
     </Container>
   )
 }

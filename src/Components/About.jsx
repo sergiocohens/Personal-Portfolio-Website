@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Card, Image, Nav, Jumbotron } from 'react-bootstrap'
+import { Container, Card, Image, Figure, Nav, Jumbotron } from 'react-bootstrap'
 import pic from '../assets/c-s.jpg'
 import reactIcon from '../assets/react.png'
 import nodeIcon from '../assets/node.png'
@@ -34,11 +34,26 @@ const About = (props) => {
       </div>
       <br/>
       <Jumbotron style={{display:'flex', flexWrap:'wrap', justifyContent: 'space-around', width: '100%', backgroundColor: props.theme[2]}}>
-        <Image className='icon' src={reactIcon}/>
-        <Image className='icon' src={nodeIcon}/>
-        <Image className='icon' src={postgresIcon}/>
-        <Image className='icon' src={html5Icon}/>
-        <Image className='icon' src={css3Icon}/>
+        <Figure>
+          <Figure.Image className='icon' style={{marginBottom:'0px'}} src={reactIcon}/>
+          <Figure.Caption>React</Figure.Caption>
+        </Figure>
+        <Figure>
+          <Figure.Image className='icon' style={{marginBottom:'0px'}} id='node-icon' src={nodeIcon}/>
+          <Figure.Caption>NodeJS</Figure.Caption>
+        </Figure>
+        <Figure>
+          <Figure.Image className='icon' style={{marginBottom:'0px'}} id='postgres-icon' src={postgresIcon}/>
+          <Figure.Caption>Postgres</Figure.Caption>
+        </Figure>
+        <Figure>
+          <Figure.Image className='icon' style={{marginBottom:'0px'}} src={html5Icon}/>
+          <Figure.Caption>HTML5</Figure.Caption>
+        </Figure>
+        <Figure>
+          <Figure.Image className='icon' style={{marginBottom:'0px'}} src={css3Icon}/>
+          <Figure.Caption>CSS3</Figure.Caption>
+        </Figure>
       </Jumbotron>
       <br/>
       <div className='right'>
@@ -47,10 +62,10 @@ const About = (props) => {
       <br/>
       <Jumbotron style={{display:'flex', flexWrap:'wrap', justifyContent: 'space-around', width: '100%', backgroundColor: props.theme[2]}}>
         <Nav.Link href='https://github.com/cohen-salama' target='_blank'>
-          <Image style={{width: '220px', padding:'10px'}} src='https://pngimg.com/uploads/github/github_PNG65.png'/>
+          <Image className='link-img' src='https://pngimg.com/uploads/github/github_PNG65.png'/>
         </Nav.Link>
         <Nav.Link href='https://www.linkedin.com/in/sergio-cohen-salama/' target='_blank'>
-          <Image style={{width: '220px', padding:'10px'}} src='https://cdn.worldvectorlogo.com/logos/linkedin.svg'/>
+          <Image className='link-img' src='https://cdn.worldvectorlogo.com/logos/linkedin.svg'/>
         </Nav.Link>
       </Jumbotron>
     </Container>
