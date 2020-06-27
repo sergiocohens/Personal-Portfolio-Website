@@ -23,7 +23,7 @@ const Home = (props) => {
                 <h4 style={{color: props.theme[0]}}>{project.name}</h4>
                 <p className='project-body'>{project.body}</p>
                 <Nav.Link href={project.github} target='_blank'>Github</Nav.Link>
-                <Nav.Link href={project.heroku} target='_blank'>Heroku</Nav.Link>
+                <Nav.Link href={project.live} target='_blank'>Live Version</Nav.Link>
               </Media.Body>
             </Media>
           </Jumbotron>
