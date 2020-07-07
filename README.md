@@ -20,7 +20,7 @@ Through this website you may:
 * Read about myself, the technologies I use and link to my Linkedin and Github profiles
 * Contact me through a form that will send a message directly to my personal email address
 * Change the colors of the website by selecting a theme or creating your own custom one
-* Play four different drum sounds from a Roland TR-909 drum machine (bonus section below Contact Form)
+* Play four different drum sounds from a Roland TR-909 drum machine (bonus section below Custom Theme)
 
 ## Technologies
 
