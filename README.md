@@ -31,7 +31,3 @@ To create this website I used:
 * CSS & HTML
 * emailJS (for the Contact Form)
 * HTML5 audio (for the Drum Machine)
-
-## Live Version
-
-[cohen-salama.space](http://www.cohen-salama.space)
